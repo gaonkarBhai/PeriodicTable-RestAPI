@@ -21,6 +21,7 @@ router.get('/elements', async (req, res) => {
     try {
         const data = await periodicTable.find({}).sort({"atomicNumber":1});
         res.status(201).send(data);
+        // console.log(await periodicTable.find({}));
     } catch (err) {
         res.status(400).send(err);
     }
